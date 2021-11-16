@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+  double v1, v2, w, y, pi = 3.1415926535, a = 335, t = 1.6, r = 3.7, l = 16.4;
+  a = a * pi / 180;
+  r = r / 100;
+  l = l / 100;
+  
+  y = asin((r * sin(a)) / l);
+  v1 = -((r * a) / t) * (sin(a + y) / cos(y));
+  v2 = -((r * a) / t) * (sin(a) + ((r * sin(a) * cos(a)) / l));
+  w = -((r * pow(a, 2)) / pow(t, 2)) * (cos(a) + ((r * cos(2 * a)) / l));
+  
+  cout << "v1= " << v1 << endl;
+  cout << "v2= " << v2 << endl;
+  cout << "w= " << w << endl;
+  
+  system ("pause");
+  return 0;
+}
