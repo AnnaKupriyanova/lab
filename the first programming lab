@@ -17,6 +17,5 @@ int main() {
   cout << "v2= " << v2 << endl;
   cout << "w= " << w << endl;
   
-  system ("pause");
   return 0;
 }
